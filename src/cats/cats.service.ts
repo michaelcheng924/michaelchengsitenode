@@ -26,7 +26,7 @@ export class CatsService {
     return `This action updates a #${id} cat`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} cat`;
+  remove(_id: number) {
+    return this.catModel.deleteOne({ _id });
   }
 }
