@@ -26,7 +26,8 @@ export class CatsService {
     return `This action updates a #${id} cat`;
   }
 
-  remove(_id: number) {
-    return this.catModel.deleteOne({ _id });
+  remove(id: string) {
+    const filter = { _id: id };
+    return this.catModel.deleteOne(filter);
   }
 }
